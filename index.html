@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <label >
+        <input id="user" type="text"  value="输入用户名"/>
+        <span id=" verify1"> </span>
+    </label>
+    <label >
+        <input id="password" type="text" value="输入密码"   />
+        <span id="verify2"> </span>
+    </label>
+    <button id="submite" onclick="display();">提交</button>
+</div>
+
+</body>
+
+<script>
+    function display() {
+        var user=document.getElementById('user').value;
+        console.log(user);
+        console.log(typeof (user));
+        var password=document.getElementById('password').value;
+        if(user==="123"&&password==="123"){
+            alert("succeed");
+        }else {
+            alert("fail");
+            document.getElementById('user').value="";
+            document.getElementById('password').value="";
+        }
+    }
+
+
+
+</script>
+</html>
